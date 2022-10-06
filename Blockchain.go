@@ -1,4 +1,4 @@
-package lib
+package Blockchain_Packages
 
 import (
 	"crypto/sha256"
