@@ -35,13 +35,13 @@ func (b *data) print() {
 	fmt.Println("Previous Hash: ", b.previousHash)
 }
 
-type block struct {
+type Block struct {
 	nodes []data
 }
 
-var BlockChain = new(block)
+var BlockChain = new(Block)
 
-func NewBlock(transaction string, nonce int, previousHash string) *block {
+func NewBlock(transaction string, nonce int, previousHash string) *Block {
 	BlockChain.nodes = append(BlockChain.nodes, *new(data).AddBlock(previousHash, transaction, nonce))
 	return BlockChain
 }
@@ -79,7 +79,7 @@ func VerifyChain() bool {
 	return true
 }
 
-func printMenu() int {
+func PrintMenu() int {
 	fmt.Println("1. Add Block")
 	fmt.Println("2. List Blocks")
 	fmt.Println("3. Change Block")
@@ -94,7 +94,7 @@ func printMenu() int {
 	return choice
 }
 
-func getTopHash() string {
+func GetTopHash() string {
 	if len(BlockChain.nodes) == 0 {
 		return "0000000000000000000000000000000000000000000000000000000000000000"
 	}
