@@ -1,4 +1,4 @@
-package BlockC
+package lib
 
 import (
 	"crypto/sha256"
