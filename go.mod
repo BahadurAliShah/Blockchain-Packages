@@ -1,3 +1,3 @@
-module https://github.com/BahadurAliShah/Blockchain-Packages
+module github.com/BahadurAliShah/Blockchain-Packages
 
 go 1.19
